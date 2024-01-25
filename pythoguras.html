@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pythonguras Theorm</title>
+</head>
+<body>
+    
+    <label for="aLeg">Enter the value of A: </label>
+    <input type="text" id="aLeg">
+    <br>
+    <br>
+    <label for="bLeg">Enter the value of B: </label>
+    <input type="text" id="bLeg">
+    <button id="submitBtn" onclick="">Submit</button>
+    <p id="cLeg">  
+    </p>
+    <script>
+        document.getElementById('submitBtn').onclick = function() {
+            a = Number(document.getElementById("aLeg").value);
+            b = Number(document.getElementById("bLeg").value);
+            console.log(
+                a,
+                b
+            );
+            c = Math.sqrt(a*a + b*b);
+            document.getElementById("cLeg").innerHTML = "The value of C is: " + c;
+        };
+        
+    </script>
+</body>
+</html>
