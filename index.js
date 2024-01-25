@@ -15,3 +15,8 @@ document.getElementById("mybtn").onclick = function () {
 
     document.getElementById("mylabel").innerHTML = "Hello " + username;
 }
+
+// type conversion
+let userage = window.prompt("Enter your age: ");
+userage = Number(userage);
+console.log(userage + 1);
