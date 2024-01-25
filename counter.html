@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Program</title>
+</head>
+<body>
+    <div style="display: block; font-size: 50px; text-align: center;">
+        <label id="counterLabel">0</label><br>
+        <input type="button" value="increase" id="increaseBtn">
+        <input type="button" value="decrease" id="decreaseBtn">
+        <input type="button" value="reset" id="resetBtn">
+    </div>
+
+
+    <script>
+        let count = 0;
+
+        document.getElementById("increaseBtn").onclick = function() {
+            // count = count + 1;
+            count++;
+            document.getElementById("counterLabel").innerHTML = count;
+        };
+
+        document.getElementById("decreaseBtn").onclick = function() {
+            // count = count - 1;
+            count--;
+            if (count < 0) {
+                count = 0;
+            }
+            document.getElementById("counterLabel").innerHTML = count;
+        };
+
+        document.getElementById("resetBtn").onclick = function() {
+            count = 0;
+            document.getElementById("counterLabel").innerHTML = count;
+        };
+
+    </script>
+</body>
+</html>
