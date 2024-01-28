@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Button</title>
+</head>
+<body>
+    <label for="myCheckBox">Please subscribe</label>
+    <input id="myCheckBox" type="checkbox" value="subscribe">
+    <br>
+    <button id="myButton">Subscribe</button>
+    <script>
+
+        document.getElementById("myButton").onclick = function() {
+            if(document.getElementById('myCheckBox').checked){
+                console.log('subscribed');
+            }
+            else{
+                console.log("Please subscribe to continue");
+            }
+        }
+
+    </script>
+</body>
+</html>
