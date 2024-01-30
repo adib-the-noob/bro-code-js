@@ -7,17 +7,39 @@
 </head>
 <body>
     <label for="myCheckBox">Please subscribe</label>
-    <input id="myCheckBox" type="checkbox" value="subscribe">
-    <br>
-    <button id="myButton">Subscribe</button>
+    
+    
+        <input id="myCheckBox" type="checkbox" value="subscribe">
+        <br>
+
+
+        <label for="visaBtn">Visa</label>
+        <input type="radio" id="visaBtn">
+        
+        <br>
+        <label for="masterCardBtn">Master Card</label>
+        <input type="radio" id="masterCardBtn">
+        
+        <br>
+        <label for="paypalBtn">Paypal</label>
+        <input type="radio" id="paypalBtn">
+        <button id="myButton">Subscribe</button>
     <script>
 
         document.getElementById("myButton").onclick = function() {
-            if(document.getElementById('myCheckBox').checked){
-                console.log('subscribed');
-            }
-            else{
-                console.log("Please subscribe to continue");
+
+            visa = document.getElementById('visaBtn');
+            masterCard = document.getElementById('masterCardBtn');
+            paypal = document.getElementById('paypalBtn');
+
+            if (visa.checked){
+                alert("You have selected Visa");
+            } else if (masterCard.checked){
+                alert("You have selected Master Card");
+            } else if (paypal.checked){
+                alert("You have selected Paypal");
+            } else {
+                alert("Please select a payment method");
             }
         }
 
